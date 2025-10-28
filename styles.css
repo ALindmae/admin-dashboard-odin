@@ -19,3 +19,13 @@ img, picture, video, canvas, svg {
 input, button, textarea, select {
   font: inherit;
 }
+
+
+.sidebar {
+  background-color:deepskyblue;
+}
+
+
+.main-content {
+  background-color: rgb(234, 234, 234);
+}
