@@ -20,12 +20,53 @@ input, button, textarea, select {
   font: inherit;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 4.5fr;
+  grid-template-rows: 0.5fr 2.5fr;
+}
 
 .sidebar {
   background-color:deepskyblue;
+  grid-row: 1 / 3;
 }
 
+.header{
+  display: grid;
+  grid-template-rows: 0.5fr 1fr;
+  grid-template-columns: 3fr 1fr;
+  grid-auto-columns: repeat(auto);
+  
+  padding: 0.5rem 2rem;
+  align-items: center;
+}
+
+form { 
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.search-bar {
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.notification-controls {
+  justify-self: end;
+}
+
+
+.greeting {
+  display: flex;
+  align-items: center;
+}
 
 .main-content {
   background-color: rgb(234, 234, 234);
 }
+
+.actions {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-self: end;
+} 

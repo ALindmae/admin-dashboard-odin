@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Admin dashboard </title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
 </head>
 <body>
     <div class="grid-container">
@@ -31,22 +32,28 @@
             </div>
         </div>
         <div class="header">
-            <div class="header-top">
-                <div class="search"></div>
-                <div class="notification-controls"></div>
+            <div class="search">
+                <form action="" method="post">
+                    <button type="submit" class="search-button"> <span class="mdi mdi-magnify"></span> </button>
+                    <input type="search" class="search-bar">
+                </form>
+                </div>
+            <div class="notification-controls">
+                <a><span class="mdi mdi-bell-badge-outline"></span></a>
+                <a href=""> <span class="mdi mdi-account-circle"></span> </a>
+                <a href=""> Username </a>
             </div>
-            <div class="header-bottom">
-                <div class="greeting">
-                    <p>
-                        <span class="greeting-text">Hi there,</span><br>
-                        <span class="greeting-user"> User Name (@username)</span>
-                    </p>
-                </div>
-                <div class="actions">
-                    <button> New </button>
-                    <button> Upload </button>
-                    <button> Share </button>
-                </div>
+            <div class="greeting">
+                <div><span class="mdi mdi-account-circle"></span></div>
+                <p>
+                    <span class="greeting-text">Hi there,</span><br>
+                    <span class="greeting-user"> User Name (@username)</span>
+                </p>
+            </div>
+            <div class="actions">
+                <button> New </button>
+                <button> Upload </button>
+                <button> Share </button>
             </div>
         </div>
         <div class="main-content">
