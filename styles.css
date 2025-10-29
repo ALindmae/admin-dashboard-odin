@@ -41,12 +41,15 @@ h2 {
   --light-gray-body: rgb(85, 85, 85);
   --border-radius: 8px;
   --card-shadow: 4px 5px 10px -6px rgb(140, 140, 140);
+  --yellow: rgb(248, 192, 30);
+  --blue: rgba(26, 146, 212);
+  --light-grey: rgba(226, 232, 240);
 }
 
 /* --- SIDEBAR --- */
 
 .sidebar {
-  background-color: rgba(26, 146, 212);
+  background-color: var(--blue);
   color: white;
   padding: 2rem;
   
@@ -66,7 +69,7 @@ ul {
   margin: 0;
   padding: 0;
 
-  font-size: clamp(1.6rem, 1vw + 0.9rem, 1.7rem);
+  font-size: clamp(1.5rem, 1vw + 0.8rem, 1.6rem);
   font-weight: 500;
 }
 
@@ -91,32 +94,100 @@ ul {
   
   padding: 0.5rem 2rem;
   align-items: center;
+  background-color: white;
+  box-shadow: 0 3px 10px -5px grey;
+  z-index: 1;
 }
 
 form { 
+  margin: 0 1rem;
   display: flex;
   flex-wrap: nowrap;
 }
 
+.search-button {
+  background: none;
+  border: none;
+  font-size: clamp(1.2rem, 1vw + 0.8rem, 1.4rem);
+  margin-right: 0.4em;
+}
+
 .search-bar {
-    width: 100%;
-    box-sizing: border-box; 
+  width: 100%;
+  box-sizing: border-box; 
+  border: none;
+  background-color: rgba(226, 232, 240);
+  border-radius: 20px;
 }
 
 .notification-controls {
   justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 1rem;
 }
+
+.notification-icon {
+  font-size: 2rem;
+}
+
+.user-icon {
+  font-size: 3.5rem;
+  color: var(--yellow);
+}
+
+.username-display {
+  font-size: clamp(1.5rem, 1vw + 0.8rem, 1.6rem);
+  font-weight: bold;
+}
+
+/* Header bottom */
 
 .greeting {
   display: flex;
   align-items: center;
+  margin: 0 1rem;
+}
+
+.greeting-user-icon {
+  font-size: 5rem;
+  color: var(--yellow);
+  margin-right: 0.7rem;
+}
+
+.greeting-text {
+  font-size: clamp(0.8rem, 0.3vw + 0.7rem, 1rem);
+  font-weight: bold;
+}
+
+.greeting-user {
+  font-size: clamp(1.9rem, 1.2vw + 1.1rem, 2rem);
+  font-weight: bold;
 }
 
 .actions {
   display: flex;
   flex-wrap: nowrap;
   justify-self: end;
+  margin: 0 1rem;
 } 
+
+.actions {
+  display: flex;
+  gap: 1.7rem;
+}
+
+.actions button {
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.6em 1.7em;
+  font-size: clamp(1rem, 0.5vw + 0.8rem, 1.125rem);
+  font-weight: bold;
+}
+
 
 
 /* --- MAIN CONTENT --- */
