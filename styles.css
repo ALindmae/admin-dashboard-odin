@@ -38,13 +38,14 @@ h2 {
 
 /* variables.css */
 :root {
-  --light-gray-body: rgb(85, 85, 85);
+  --light-gray-text: rgb(85, 85, 85);
   --border-radius: 8px;
   --card-shadow: 4px 5px 10px -6px rgb(140, 140, 140);
   --yellow: rgb(248, 192, 30);
   --blue: rgba(26, 146, 212);
-  --light-grey: rgba(226, 232, 240);
+  --light-gray: rgba(226, 232, 240);
 }
+
 
 /* --- SIDEBAR --- */
 
@@ -95,7 +96,7 @@ ul {
   padding: 0.5rem 2rem;
   align-items: center;
   background-color: white;
-  box-shadow: 0 3px 10px -5px grey;
+  box-shadow: 0 3px 10px -5px gray;
   z-index: 1;
 }
 
@@ -116,7 +117,7 @@ form {
   width: 100%;
   box-sizing: border-box; 
   border: none;
-  background-color: rgba(226, 232, 240);
+  background-color: var(--light-gray);
   border-radius: 20px;
 }
 
@@ -189,18 +190,16 @@ form {
 }
 
 
-
 /* --- MAIN CONTENT --- */
 
 .main-content {
-  background-color: rgb(234, 234, 234);
+  background-color: var(--light-gray);
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: max-content max-content;
   padding: 2rem;
   gap: 2rem;
 }
-
 
 /* Projects */
 
