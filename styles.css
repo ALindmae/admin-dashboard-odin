@@ -1,3 +1,5 @@
+/* reset.css */
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -33,6 +35,13 @@ h2 {
   margin-bottom: 10px;
 }
 
+
+/* variables.css */
+:root {
+  --light-gray-body: rgb(85, 85, 85);
+  --border-radius: 8px;
+  --card-shadow: 4px 5px 10px -6px rgb(140, 140, 140);
+}
 
 /* --- SIDEBAR --- */
 
@@ -107,7 +116,7 @@ form {
   background-color: rgb(234, 234, 234);
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: max-content max-content;
   padding: 2rem;
   gap: 2rem;
 }
@@ -133,7 +142,7 @@ form {
   );
   padding: 2.1rem;
   border-radius: 8px;
-  box-shadow: 4px 5px 10px -6px rgb(125, 125, 125);
+  box-shadow: 4px 5px 10px -6px rgb(140, 140, 140);
 
   display: grid;
   gap: 2rem;
@@ -146,7 +155,7 @@ form {
 
 .card-description {
   font-size: clamp(1rem, 0.5vw + 0.8rem, 1.125rem);
-  color:rgb(75, 75, 75);
+  color:rgb(85, 85, 85);
 }
 
 .card-actions {
@@ -169,8 +178,9 @@ form {
   display: grid;
 
   background-color: white;
-  padding: 2rem;
-
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
 }
 
 .announcement {
@@ -182,28 +192,49 @@ form {
     border-bottom: none;
 }
 
+.announcement-title {
+  font-size: clamp(1rem, 0.5vw + 0.8rem, 1.125rem);
+  font-weight: bold;
+}
+
+.announcement-text {
+  font-size: clamp(0.8rem, 0.3vw + 0.7rem, 1rem);
+  color: var(--light-gray-body);
+  line-height: 1.2;
+}
+
 
 /* Trending */
 
 .trending-grid {
   display: grid;
-  gap: 1rem;
+  gap: 0.5rem;
 
   background-color: white;
   padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
 }
 
 .trending-item {
   display: flex;
   align-items: center;
-
 }
 
 .item-icon {
-  margin-right: 0.5rem;
-  font-size: 3rem;
+  margin-right: 1rem;
+  font-size: 3.5rem;
 }
 
 .trending-item:nth-child(odd) .item-profile {
   color: green;
+}
+
+.trending-username {
+  font-size: clamp(1rem, 0.5vw + 0.8rem, 1.125rem);
+}
+
+.trending-project {
+  font-size: clamp(1rem, 0.5vw + 0.8rem, 1.125rem);
+  color: var(--light-gray-body);
 }
