@@ -121,10 +121,24 @@ form {
 
 .card {
   background-color: white;
-  padding: 2rem;
+  padding: 2.1rem;
+
+  display: grid;
+  gap: 2rem;
 }
 
-.card-text {}
+.card-actions {
+  justify-self: end;
+  align-self: end;
+
+  display: flex;
+  gap: 1.5rem;
+}
+
+.card-icon {
+  font-size: 1.7rem;
+  color: rgb(56, 56, 56);
+}
 
 
 /* Announcements */
