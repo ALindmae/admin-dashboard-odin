@@ -151,7 +151,23 @@ form {
 
 .trending-grid {
   display: grid;
+  gap: 1rem;
 
   background-color: white;
   padding: 2rem;
+}
+
+.trending-item {
+  display: flex;
+  align-items: center;
+
+}
+
+.item-icon {
+  margin-right: 0.5rem;
+  font-size: 3rem;
+}
+
+.trending-item:nth-child(odd) .item-profile {
+  color: green;
 }
